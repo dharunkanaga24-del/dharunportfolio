@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DHARUN P — AI & ML Student | Creative Developer Portfolio</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Official portfolio of Dharun P, First-Year B.Tech Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning at SRM Institute of Science and Technology, Ramapuram, Chennai.">
+  <meta name="author" content="DHARUN P">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="DHARUN P — Premium Cinematic 3D Portfolio">
+  <meta property="og:description" content="B.Tech CSE AI & ML student at SRM Ramapuram. Exploring technology, creative development, and meaningful digital experiences.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts: Space Grotesk, Inter, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Three.js (CDN for 3D Experience) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Ambient Cinematic Background Effects -->
+  <div class="ambient-noise"></div>
+  <div class="ambient-glow-circle ambient-glow-1"></div>
+  <div class="ambient-glow-circle ambient-glow-2"></div>
+  <div id="cursor-spotlight"></div>
+
+  <!-- Custom Cursor Elements (Desktop) -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-follower"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Dharun P Home">
+        <span>DHARUN P</span>
+        <div class="nav-brand-dot"></div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <button type="button" class="btn-outline trigger-download-resume" aria-label="Download Resume PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Resume</span>
+        </button>
+        <a href="#contact" class="btn-primary">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" class="nav-mobile-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" aria-label="Mobile Navigation Menu">
+    <ul class="mobile-links">
+      <li><a href="#home" class="mobile-link active">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#journey" class="mobile-link">Journey</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#resume" class="mobile-link">Resume</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+      <button type="button" class="btn-outline trigger-download-resume">Download Resume</button>
+      <a href="#contact" class="btn-primary">Let's Connect</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         01 HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <!-- 3D Three.js Interactive Canvas Container -->
+      <div id="three-canvas-wrap" class="hero-3d-canvas-container" title="Click and drag to rotate the 3D energy core">
+        <canvas id="three-canvas"></canvas>
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <!-- Available Status Pill -->
+            <div class="hero-badge">
+              <span class="hero-badge-pulse"></span>
+              <span>Available for Collaboration &amp; Learning</span>
+            </div>
+
+            <div class="hero-eyebrow">HELLO, I'M</div>
+            <h1 class="hero-name">
+              <span class="hero-name-gradient">DHARUN P</span>
+            </h1>
+
+            <!-- Animated Typing Subtitle -->
+            <div class="hero-typing-wrap">
+              <span class="hero-typing-prefix">&gt; </span>
+              <span id="hero-typing" class="hero-typing-text">Aspiring AI Engineer</span>
+              <span class="hero-typing-cursor"></span>
+            </div>
+
+            <!-- Description -->
+            <p class="hero-desc">
+              I'm a first-year CSE student specializing in Artificial Intelligence and Machine Learning at SRM Ramapuram. I enjoy exploring technology, developing creative solutions, and transforming ideas into meaningful digital experiences.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span>Explore My Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <button type="button" class="btn-secondary trigger-download-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </button>
+
+              <a href="#contact" class="btn-outline">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials">
+              <!-- GitHub -->
+              <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/dharun-p-a8877b428" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/_.itz_dhxx._" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Instagram Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- Email -->
+              <a href="mailto:dharunkanaga24@gmail.com" class="hero-social-link" aria-label="Direct Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="hero-scroll-cue">
+        <div class="hero-scroll-mouse">
+          <div class="hero-scroll-wheel"></div>
+        </div>
+        <span class="hero-scroll-text">SCROLL DOWN</span>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-tag">PERSONAL INTRODUCTION</div>
+        <h2 class="section-heading">ABOUT <span class="highlight">ME</span></h2>
+        <p class="section-subtitle">
+          Building the foundation for tomorrow's intelligent systems, one algorithm at a time.
+        </p>
+
+        <div class="about-grid">
+          <!-- Stylized Cyber Profile Card -->
+          <div class="about-card-portrait">
+            <div class="about-portrait-header">
+              <div class="about-portrait-status">
+                <span class="hero-badge-pulse"></span>
+                <span>Active First-Year Student</span>
+              </div>
+              <span class="about-portrait-badge">SRM RAMAPURAM</span>
+            </div>
+
+            <!-- Stylized Cyber Monogram / Visual Graphic -->
+            <div class="about-profile-visual">
+              <svg class="about-cyber-graphic" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Concentric Tech Rings -->
+                <circle cx="200" cy="200" r="160" stroke="#830000" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.6"/>
+                <circle cx="200" cy="200" r="130" stroke="#BC0202" stroke-width="1" opacity="0.4"/>
+                <circle cx="200" cy="200" r="100" stroke="#FF0000" stroke-width="1.5" stroke-dasharray="12 12" opacity="0.7"/>
+                
+                <!-- Stylized Geometric DP Monogram -->
+                <polygon points="200,80 304,140 304,260 200,320 96,260 96,140" stroke="#FF0000" stroke-width="2" fill="rgba(131, 0, 0, 0.25)"/>
+                <polygon points="200,110 278,155 278,245 200,290 122,245 122,155" stroke="#BC0202" stroke-width="1" fill="rgba(0, 0, 0, 0.4)"/>
+                
+                <!-- Central Typography "DP" -->
+                <text x="200" y="215" font-family="'Space Grotesk', sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">DP</text>
+                <text x="200" y="240" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#FFAAAA" text-anchor="middle" letter-spacing="6">AI &amp; ML SPECIALIST</text>
+
+                <!-- Orbital Nodes -->
+                <circle cx="200" cy="80" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+                <circle cx="304" cy="140" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+                <circle cx="304" cy="260" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+                <circle cx="200" cy="320" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+                <circle cx="96" cy="260" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+                <circle cx="96" cy="140" r="5" fill="#FF0000" filter="drop-shadow(0 0 6px #FF0000)"/>
+              </svg>
+            </div>
+
+            <!-- Profile Metadata Rows -->
+            <div class="about-details-list">
+              <div class="about-detail-row">
+                <span class="about-detail-label">Name</span>
+                <span class="about-detail-val">DHARUN P</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Institution</span>
+                <span class="about-detail-val">SRM IST, Ramapuram, Chennai</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Degree</span>
+                <span class="about-detail-val">B.Tech CSE</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Specialization</span>
+                <span class="about-detail-val accent">Artificial Intelligence &amp; ML</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Tenure</span>
+                <span class="about-detail-val">2026 – 2030 (First Year)</span>
+              </div>
+              <div class="about-detail-row">
+                <span class="about-detail-label">Contact</span>
+                <span class="about-detail-val">dharunkanaga24@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Narrative Content -->
+          <div class="about-content-text">
+            <p>
+              I'm <strong>Dharun P</strong>, a first-year Computer Science and Engineering student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at <strong>SRM Institute of Science and Technology, Ramapuram</strong>.
+            </p>
+            <p>
+              I'm passionate about programming, AI, machine learning, web development, and emerging technologies. I enjoy learning new skills, experimenting with ideas, and building practical projects.
+            </p>
+            <p>
+              My goal is to become a skilled <strong>AI Engineer</strong> and develop technology that creates meaningful real-world impact.
+            </p>
+
+            <!-- Animated Statistics Grid -->
+            <div class="about-stats-grid">
+              <div class="about-stat-card">
+                <div class="about-stat-num" data-counter="2026">2026</div>
+                <div class="about-stat-label">Engineering Inception at SRM IST</div>
+              </div>
+              <div class="about-stat-card">
+                <div class="about-stat-num" data-counter="2030">2030</div>
+                <div class="about-stat-label">B.Tech Graduation Horizon</div>
+              </div>
+              <div class="about-stat-card">
+                <div class="about-stat-num">1st Year</div>
+                <div class="about-stat-label">Foundational CSE, AI &amp; ML Track</div>
+              </div>
+              <div class="about-stat-card">
+                <div class="about-stat-num">100%</div>
+                <div class="about-stat-label">Passion for Impactful Tech</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; display: flex; gap: 1rem;">
+              <a href="#journey" class="btn-primary">
+                <span>View Academic Journey</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <button type="button" class="btn-outline trigger-view-resume">
+                <span>Quick Bio Preview</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 ACADEMIC JOURNEY (2026 – 2030)
+         ========================================================================== -->
+    <section id="journey" class="timeline-section">
+      <div class="container">
+        <div class="section-tag">ACADEMIC ROADMAP</div>
+        <h2 class="section-heading">MY <span class="highlight">JOURNEY</span></h2>
+        <p class="section-subtitle">
+          A forward-looking academic timeline from foundational computer science to professional AI engineering.
+        </p>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- 2026: Beginning -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year-badge">2026</span>
+              <span class="timeline-status">Current Year</span>
+              <h3 class="timeline-title">Beginning my engineering journey</h3>
+              <p class="timeline-desc">
+                Admitted to SRM Institute of Science and Technology, Ramapuram. Commencing first-year studies in Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning. Building core fundamentals in C programming, mathematics, and computing logic.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2027: Skill Development -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year-badge">2027</span>
+              <span class="timeline-status">Upcoming Horizon</span>
+              <h3 class="timeline-title">Developing stronger programming &amp; technical skills</h3>
+              <p class="timeline-desc">
+                Deepening knowledge in data structures and algorithms, object-oriented principles, Python mastery, database systems, and modern full-stack web architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2028: AI & ML Exploration -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year-badge">2028</span>
+              <span class="timeline-status">Specialization Phase</span>
+              <h3 class="timeline-title">Exploring advanced AI, ML &amp; software development</h3>
+              <p class="timeline-desc">
+                Immersing into machine learning algorithms, neural network design, computer vision, natural language processing, and scalable distributed software engineering principles.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2029: Practical Engineering -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year-badge">2029</span>
+              <span class="timeline-status">Innovation &amp; Experience</span>
+              <h3 class="timeline-title">Building advanced projects &amp; gaining practical experience</h3>
+              <p class="timeline-desc">
+                Developing capstone intelligent systems, deploying end-to-end AI applications, pursuing engineering internships, and participating in technical hackathons and collaborative research.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2030: Graduation -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-year-badge">2030</span>
+              <span class="timeline-status">Graduation Milestone</span>
+              <h3 class="timeline-title">Completing B.Tech &amp; preparing for professional opportunities</h3>
+              <p class="timeline-desc">
+                Graduating with B.Tech in CSE (AI &amp; ML) from SRM IST Ramapuram. Stepping into the industry as a skilled, impact-driven AI Engineer and software developer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 SKILLS SECTION (Interactive 3D Tilt Cards)
+         ========================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-tag">TECHNICAL ARSENAL</div>
+        <h2 class="section-heading">INTERACTIVE <span class="highlight">SKILLS</span></h2>
+        <p class="section-subtitle">
+          Core programming foundations, modern web technologies, development tools, and analytical strengths.
+        </p>
+
+        <!-- Filter Navigation Tabs -->
+        <div class="skills-filter-nav">
+          <button type="button" class="skill-tab-btn active" data-filter="all">All Skills</button>
+          <button type="button" class="skill-tab-btn" data-filter="programming">Programming</button>
+          <button type="button" class="skill-tab-btn" data-filter="web">Web Development</button>
+          <button type="button" class="skill-tab-btn" data-filter="tools">Tools</button>
+          <button type="button" class="skill-tab-btn" data-filter="interests">Areas of Interest</button>
+          <button type="button" class="skill-tab-btn" data-filter="strengths">Core Strengths</button>
+        </div>
+
+        <!-- Skills Cards Grid -->
+        <div class="skills-grid">
+          <!-- 1. C -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                  <line x1="9" y1="20" x2="15" y2="20"></line>
+                  <line x1="12" y1="4" x2="12" y2="20"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Programming</span>
+            </div>
+            <div>
+              <h3 class="skill-title">C Language</h3>
+              <p class="skill-desc">
+                Mastering foundational computing, memory allocation, pointers, structs, and low-level algorithmic problem solving.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Python (Learning) -->
+          <div class="skill-card" data-category="programming">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Programming</span>
+            </div>
+            <div>
+              <h3 class="skill-title">
+                <span>Python</span>
+                <span class="skill-learning-tag">Learning</span>
+              </h3>
+              <p class="skill-desc">
+                Actively learning syntax, scripting, data manipulation, and scientific libraries for upcoming AI and ML workloads.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. HTML -->
+          <div class="skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Web Dev</span>
+            </div>
+            <div>
+              <h3 class="skill-title">HTML5</h3>
+              <p class="skill-desc">
+                Writing semantic, accessible, SEO-compliant markup with clean structural hierarchy and modern web standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. CSS -->
+          <div class="skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Web Dev</span>
+            </div>
+            <div>
+              <h3 class="skill-title">CSS3</h3>
+              <p class="skill-desc">
+                Crafting responsive layouts, glassmorphism, flexbox/grid architectures, keyframe animations, and custom design systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. JavaScript (Learning) -->
+          <div class="skill-card" data-category="web">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Web Dev</span>
+            </div>
+            <div>
+              <h3 class="skill-title">
+                <span>JavaScript</span>
+                <span class="skill-learning-tag">Learning</span>
+              </h3>
+              <p class="skill-desc">
+                Building interactive DOM experiences, event handling, ES6+ features, asynchronous requests, and dynamic UI states.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6. Git -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="18" cy="6" r="3"></circle>
+                  <path d="M18 9v2a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"></path>
+                  <line x1="12" y1="12" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Tools</span>
+            </div>
+            <div>
+              <h3 class="skill-title">Git</h3>
+              <p class="skill-desc">
+                Distributed version control, atomic commits, branching workflows, pull requests, and collaborative code management.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. GitHub -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Tools</span>
+            </div>
+            <div>
+              <h3 class="skill-title">GitHub</h3>
+              <p class="skill-desc">
+                Hosting repositories, continuous deployment, open-source tracking, and documentation via markdown.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8. VS Code -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 16v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  <polyline points="11 12 16 12 16 7"></polyline>
+                  <line x1="22" y1="12" x2="16" y2="12"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Tools</span>
+            </div>
+            <div>
+              <h3 class="skill-title">VS Code</h3>
+              <p class="skill-desc">
+                Proficient editor setup with debugging extensions, linting, snippets, integrated terminal, and live server tools.
+              </p>
+            </div>
+          </div>
+
+          <!-- 9. Artificial Intelligence & ML -->
+          <div class="skill-card" data-category="interests">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Interest</span>
+            </div>
+            <div>
+              <h3 class="skill-title">Artificial Intelligence</h3>
+              <p class="skill-desc">
+                Deep interest in neural networks, intelligent agents, predictive modeling, machine perception, and ML architectures.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10. Software Engineering -->
+          <div class="skill-card" data-category="interests">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Interest</span>
+            </div>
+            <div>
+              <h3 class="skill-title">Software Engineering</h3>
+              <p class="skill-desc">
+                Architecting modular, maintainable, high-performance software with clean design patterns and documentation integrity.
+              </p>
+            </div>
+          </div>
+
+          <!-- 11. Problem Solving & Creative Thinking -->
+          <div class="skill-card" data-category="strengths">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Strength</span>
+            </div>
+            <div>
+              <h3 class="skill-title">Problem Solving</h3>
+              <p class="skill-desc">
+                Deconstructing complex technical challenges into manageable components with analytical rigor and creative thinking.
+              </p>
+            </div>
+          </div>
+
+          <!-- 12. Quick Learning & Team Collaboration -->
+          <div class="skill-card" data-category="strengths">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="skill-category-badge">Strength</span>
+            </div>
+            <div>
+              <h3 class="skill-title">Team Collaboration</h3>
+              <p class="skill-desc">
+                Strong communication, rapid adaptability to emerging toolchains, and dedicated synergy in peer programming teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 FEATURED PROJECTS — AIRGUARD SHOWCASE
+         ========================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-tag">FEATURED EXPERIENCE</div>
+        <h2 class="section-heading">PROJECT <span class="highlight">SHOWCASE</span></h2>
+        <p class="section-subtitle">
+          Bridging physical hardware sensors and real-time digital software experiences.
+        </p>
+
+        <!-- Featured Project: AirGuard Card -->
+        <article class="project-featured-card">
+          <div class="project-featured-grid">
+            <!-- Left Info Column -->
+            <div>
+              <span class="project-tag-pill">
+                <span class="hero-badge-pulse"></span>
+                <span>Mini Project Highlight</span>
+              </span>
+
+              <h3 class="project-title">AirGuard — Air Quality Monitoring System</h3>
+
+              <p class="project-desc">
+                AirGuard is a mini project focused on monitoring environmental air quality using hardware sensors and a web-based dashboard. Designed to provide real-time ambient telemetry and safety threshold insights.
+              </p>
+
+              <!-- Feature Bullets -->
+              <div class="project-features-list">
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span>
+                  <span><strong>Hardware sensor integration</strong> for particulate &amp; gas detection.</span>
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span>
+                  <span><strong>Air quality monitoring</strong> with automated threshold alerts.</span>
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span>
+                  <span><strong>Web-based dashboard</strong> for intuitive environmental observation.</span>
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span>
+                  <span><strong>Real-time data visualization</strong> with animated dynamic telemetry charts.</span>
+                </div>
+                <div class="project-feature-item">
+                  <span class="project-feature-bullet"></span>
+                  <span><strong>Environmental monitoring</strong> focused on community well-being.</span>
+                </div>
+              </div>
+
+              <!-- Technology Labels -->
+              <div class="project-tech-chips">
+                <span class="tech-chip">IoT</span>
+                <span class="tech-chip">Sensors</span>
+                <span class="tech-chip">Web Development</span>
+                <span class="tech-chip">Real-Time Data</span>
+                <span class="tech-chip">Hardware Interface</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" id="trigger-airguard-modal" class="btn-primary">
+                  <span>View Architecture</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+
+                <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Real-Time AirGuard Simulator -->
+            <div class="airguard-simulator-wrap">
+              <div class="sim-header">
+                <div class="sim-title">
+                  <span class="sim-pulse-dot"></span>
+                  <span>AIRGUARD LIVE TELEMETRY SIM</span>
+                </div>
+                <span id="sim-aqi-status" class="sim-status-label" style="color: #4EFA94; font-weight: 600;">Good (Safe)</span>
+              </div>
+
+              <!-- Live Sensor Values -->
+              <div class="sim-metrics-grid">
+                <div class="sim-metric-box">
+                  <div id="sim-aqi-val" class="sim-metric-val good">42</div>
+                  <div class="sim-metric-name">AQI INDEX</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div id="sim-pm25-val" class="sim-metric-val">11.8</div>
+                  <div class="sim-metric-name">PM2.5 (µg/m³)</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div id="sim-pm10-val" class="sim-metric-val">22.6</div>
+                  <div class="sim-metric-name">PM10 (µg/m³)</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div id="sim-co2-val" class="sim-metric-val">412</div>
+                  <div class="sim-metric-name">CO2 (PPM)</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div id="sim-temp-val" class="sim-metric-val">26.4°C</div>
+                  <div class="sim-metric-name">TEMP</div>
+                </div>
+                <div class="sim-metric-box">
+                  <div class="sim-metric-val">54%</div>
+                  <div class="sim-metric-name">HUMIDITY</div>
+                </div>
+              </div>
+
+              <!-- Dynamic Waveform Canvas -->
+              <div class="sim-canvas-wrap">
+                <canvas id="airguard-canvas"></canvas>
+              </div>
+
+              <!-- Simulation Control Footer -->
+              <div class="sim-controls">
+                <span class="sim-controls-note">Live sensor stream updated every 1.2s</span>
+                <button type="button" id="sim-test-spike" class="sim-btn-action">Simulate Spike</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Additional Projects Architecture (Extensible for Future Work) -->
+        <div class="additional-projects-grid">
+          <!-- Upcoming Project 1 -->
+          <div class="project-sub-card">
+            <div>
+              <div class="project-sub-header">
+                <span class="project-sub-badge">In Planning</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">AI &amp; ML</span>
+              </div>
+              <h4 class="project-sub-title">Neural Vision Classifier</h4>
+              <p class="project-sub-desc">
+                Exploratory computer vision project utilizing deep convolutional networks to identify environmental features and anomalies.
+              </p>
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">OpenCV</span>
+              <span class="tech-chip">Neural Nets</span>
+            </div>
+          </div>
+
+          <!-- Upcoming Project 2 -->
+          <div class="project-sub-card">
+            <div>
+              <div class="project-sub-header">
+                <span class="project-sub-badge">Learning Track</span>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Web Architecture</span>
+              </div>
+              <h4 class="project-sub-title">Algorithmic Visualizer</h4>
+              <p class="project-sub-desc">
+                Interactive web visualizer demonstrating pathfinding, sorting, and graph exploration algorithms with custom state management.
+              </p>
+            </div>
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Data Structures</span>
+              <span class="tech-chip">Canvas API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06 RESUME SHOWCASE SECTION
+         ========================================================================== -->
+    <section id="resume" class="resume-section">
+      <div class="container">
+        <div class="section-tag">CREDENTIALS &amp; PROFILE</div>
+        <h2 class="section-heading">MY <span class="highlight">RESUME</span></h2>
+        <p class="section-subtitle">
+          Verified academic profile, foundational technical skillsets, and career objective.
+        </p>
+
+        <div class="resume-wrapper">
+          <div class="resume-header-row">
+            <div>
+              <h3 class="resume-candidate-name">DHARUN P</h3>
+              <div class="resume-candidate-role">Aspiring AI Engineer | B.Tech CSE (AI &amp; ML)</div>
+              <div style="margin-top: 6px; font-size: 0.88rem; color: var(--text-muted);">
+                SRM Institute of Science and Technology, Ramapuram &bull; Chennai, India
+              </div>
+            </div>
+
+            <div class="resume-download-actions">
+              <button type="button" class="btn-primary trigger-download-resume">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download PDF</span>
+              </button>
+              <button type="button" class="btn-outline trigger-view-resume">
+                <span>View Fullscreen</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="resume-columns">
+            <!-- Left Column: Education & Focus -->
+            <div>
+              <div class="resume-block-title">Education</div>
+              <div class="resume-item">
+                <div class="resume-item-title">B.Tech in Computer Science and Engineering</div>
+                <div class="resume-item-meta">Specialization: Artificial Intelligence &amp; Machine Learning</div>
+                <div class="resume-item-meta" style="color: var(--text-muted);">2026 – 2030 (First Year)</div>
+                <p class="resume-item-desc">
+                  SRM Institute of Science and Technology, Ramapuram, Chennai. Focusing on foundational computer systems, algorithms, discrete mathematics, and emerging AI paradigms.
+                </p>
+              </div>
+
+              <div class="resume-block-title" style="margin-top: 2rem;">Career Objective</div>
+              <div class="resume-item">
+                <p class="resume-item-desc">
+                  To grow into an adept, impactful AI Engineer, mastering algorithmic engineering and practical software development to build real-world digital solutions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Column: Skills & Projects -->
+            <div>
+              <div class="resume-block-title">Key Competencies</div>
+              <div class="resume-item">
+                <div class="resume-item-title">Programming Languages</div>
+                <p class="resume-item-desc">C (Foundations), Python (Active Learning)</p>
+              </div>
+              <div class="resume-item">
+                <div class="resume-item-title">Web Development</div>
+                <p class="resume-item-desc">HTML5, CSS3, JavaScript (Learning), Responsive Design</p>
+              </div>
+              <div class="resume-item">
+                <div class="resume-item-title">Tools &amp; Environments</div>
+                <p class="resume-item-desc">Git, GitHub, VS Code, Windows Terminal</p>
+              </div>
+
+              <div class="resume-block-title" style="margin-top: 2rem;">Highlighted Project</div>
+              <div class="resume-item">
+                <div class="resume-item-title">AirGuard — Air Quality Monitoring System</div>
+                <div class="resume-item-meta">IoT &bull; Sensor Integration &bull; Real-Time Dashboard</div>
+                <p class="resume-item-desc">
+                  Hardware-sensor mini project providing environmental air monitoring and real-time visualization.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct PDF Placement Notice -->
+          <div class="resume-notice-box">
+            <div class="resume-notice-text">
+              <strong>PDF Resume Sync:</strong> Place your official <code>resume.pdf</code> into the repository root to enable direct one-click PDF downloading.
+            </div>
+            <a href="mailto:dharunkanaga24@gmail.com?subject=Resume%20Inquiry%20for%20Dharun%20P" class="btn-outline" style="padding: 8px 16px; font-size: 0.78rem;">
+              Request by Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07 CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-tag">COMMUNICATION</div>
+        <h2 class="section-heading">LET'S <span class="highlight">CONNECT</span></h2>
+        <p class="section-subtitle">
+          Have an idea, project, or opportunity? I'd love to connect and explore something meaningful together.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Contact Information Cards -->
+          <div class="contact-info-panel">
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <div class="contact-card-label">Email Address</div>
+                <a href="mailto:dharunkanaga24@gmail.com" class="contact-card-val" title="Click to email Dharun P">dharunkanaga24@gmail.com</a>
+              </div>
+              <button type="button" id="copy-email-btn" class="contact-copy-btn">Copy</button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <div class="contact-card-label">Direct Telephone</div>
+                <a href="tel:+918015721946" class="contact-card-val">+91 80157 21946</a>
+              </div>
+              <button type="button" id="copy-phone-btn" class="contact-copy-btn">Copy</button>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/dharun-p-a8877b428" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <div class="contact-card-label">Professional Network</div>
+                <div class="contact-card-val">linkedin.com/in/dharun-p-a8877b428</div>
+              </div>
+              <span class="contact-copy-btn">Open &rarr;</span>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <div class="contact-card-label">Open Source Profile</div>
+                <div class="contact-card-val">github.com/dharunkanaga24-del</div>
+              </div>
+              <span class="contact-copy-btn">Open &rarr;</span>
+            </a>
+
+            <!-- Instagram Card -->
+            <a href="https://www.instagram.com/_.itz_dhxx._" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div class="contact-card-content">
+                <div class="contact-card-label">Social Profile</div>
+                <div class="contact-card-val">@_.itz_dhxx._</div>
+              </div>
+              <span class="contact-copy-btn">Open &rarr;</span>
+            </a>
+          </div>
+
+          <!-- Right: Interactive Validated Contact Form -->
+          <div class="contact-form-card">
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #FFFFFF; margin-bottom: 0.5rem;">Send a Direct Message</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">
+              Fill in your details below to dispatch a message directly to my inbox.
+            </p>
+
+            <form id="portfolio-contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name *</label>
+                <input type="text" id="form-name" class="form-control" placeholder="e.g. Alex Rivera" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email Address *</label>
+                <input type="email" id="form-email" class="form-control" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="e.g. AI Project Collaboration / Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message or inquiry here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%;">
+                <span>Send Message via Email</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span>DHARUN P</span>
+          <div class="nav-brand-dot"></div>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dharun-p-a8877b428" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://www.instagram.com/_.itz_dhxx._" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 DHARUN P. All rights reserved. Crafted for high-performance cinematic presentation.
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <button type="button" id="trigger-shortcuts-modal" class="btn-outline" style="padding: 6px 14px; font-size: 0.75rem;">
+            Hotkeys [?]
+          </button>
+          <a href="#home" id="back-to-top" class="footer-back-to-top">
+            <span>Back to top &uarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & TOAST NOTIFICATION
+       ========================================================================== -->
+  <!-- 1. AirGuard Architecture Modal -->
+  <div id="airguard-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="airguard-modal-title">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="section-tag">PROJECT ARCHITECTURE</div>
+      <h3 id="airguard-modal-title" style="font-family: var(--font-display); font-size: 1.8rem; color: #FFFFFF; margin-bottom: 1rem;">
+        AirGuard System Design
+      </h3>
+      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+        AirGuard integrates hardware gas and particulate matter sensors with microcontroller interfaces to aggregate continuous air quality telemetry. The web application ingests streaming metrics to plot live environmental health indicators.
+      </p>
+
+      <div style="display: grid; gap: 1rem; margin-bottom: 2rem;">
+        <div style="padding: 14px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <strong style="color: var(--red-bright);">1. Hardware Layer:</strong> Sensor array capturing atmospheric particulate matter (PM2.5, PM10) and ambient carbon monoxide / gas concentration.
+        </div>
+        <div style="padding: 14px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <strong style="color: var(--red-bright);">2. Telemetry Processing:</strong> Real-time ADC sampling, smoothing window calculation, and AQI category classification.
+        </div>
+        <div style="padding: 14px; background: rgba(0,0,0,0.5); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <strong style="color: var(--red-bright);">3. Web Interface:</strong> Reactive browser dashboard rendering real-time animated waveforms, gauge meters, and alert thresholds.
+        </div>
+      </div>
+
+      <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%;">
+        <span>Explore GitHub Profile &amp; Repositories</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. Resume Fullscreen View Modal -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-content" style="max-width: 720px;">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="section-tag">DIGITAL CREDENTIALS</div>
+      <h3 id="resume-modal-title" style="font-family: var(--font-display); font-size: 1.8rem; color: #FFFFFF; margin-bottom: 0.5rem;">
+        DHARUN P — Full Profile
+      </h3>
+      <p style="color: var(--red-bright); font-weight: 600; margin-bottom: 1.5rem;">
+        B.Tech CSE &bull; Artificial Intelligence &amp; Machine Learning (SRM Ramapuram, 2026–2030)
+      </p>
+
+      <div style="max-height: 55vh; overflow-y: auto; padding-right: 10px; display: grid; gap: 1.25rem;">
+        <div style="padding: 16px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <h4 style="color: #FFFFFF; margin-bottom: 6px;">Profile Summary</h4>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+            First-year Computer Science and Engineering student at SRM Institute of Science and Technology, Ramapuram. Highly motivated to engineer practical applications in AI, machine learning, web systems, and IoT.
+          </p>
+        </div>
+
+        <div style="padding: 16px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <h4 style="color: #FFFFFF; margin-bottom: 6px;">Core Competencies</h4>
+          <ul style="color: var(--text-secondary); font-size: 0.92rem; padding-left: 20px; line-height: 1.6;">
+            <li>Programming: C (Foundational), Python (In Progress)</li>
+            <li>Web: HTML5, CSS3, JavaScript (Learning)</li>
+            <li>Tools: Git, GitHub, VS Code</li>
+            <li>Strengths: Problem Solving, Creative Thinking, Teamwork, Adaptability</li>
+          </ul>
+        </div>
+
+        <div style="padding: 16px; background: rgba(0,0,0,0.6); border: 1px solid var(--border-subtle); border-radius: 8px;">
+          <h4 style="color: #FFFFFF; margin-bottom: 6px;">Direct Contact</h4>
+          <p style="color: var(--text-secondary); font-size: 0.92rem;">
+            Email: <a href="mailto:dharunkanaga24@gmail.com" style="color: #FFAAAA;">dharunkanaga24@gmail.com</a><br>
+            Phone: <a href="tel:+918015721946" style="color: #FFAAAA;">+91 80157 21946</a><br>
+            GitHub: <a href="https://github.com/dharunkanaga24-del" target="_blank" rel="noopener" style="color: #FFAAAA;">github.com/dharunkanaga24-del</a>
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+        <a href="mailto:dharunkanaga24@gmail.com?subject=Resume%20Inquiry%20for%20Dharun%20P" class="btn-primary" style="flex: 1;">
+          <span>Contact Directly</span>
+        </a>
+        <button type="button" class="btn-outline" onclick="this.closest('.modal-overlay').classList.remove('open')">
+          <span>Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Keyboard Shortcuts Modal -->
+  <div id="shortcuts-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title">
+    <div class="modal-content" style="max-width: 480px;">
+      <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="section-tag">ACCESSIBILITY</div>
+      <h3 id="shortcuts-title" style="font-family: var(--font-display); font-size: 1.6rem; color: #FFFFFF; margin-bottom: 1.25rem;">
+        Keyboard Hotkeys
+      </h3>
+      <div style="display: grid; gap: 0.75rem; font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Home</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">H</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to About</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">A</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Skills</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">S</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Projects</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">P</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Journey</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">J</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Resume</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">R</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Go to Contact</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">C</kbd>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(0,0,0,0.5); border-radius: 6px;">
+          <span style="color: var(--text-secondary);">Close any Modal</span>
+          <kbd style="background: var(--red-dark); padding: 2px 8px; border-radius: 4px; font-weight: bold; color: #fff;">ESC</kbd>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Feedback Toast -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/three-hero.js"></script>
+  <script src="js/airguard-sim.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
